@@ -1,0 +1,43 @@
+html, body {
+    background: #eee;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#contacts {
+    margin: 0;
+    padding: 15px 0 0 15px;
+    width: 100%;
+}
+
+.contact-container {
+    background: white;
+    border: 1px solid #ddd;
+    display: block;
+    float: left;
+    margin: 0 15px 15px 0;
+    padding: 10px;
+    position: relative;
+    min-width: 175px;
+    width: 20%;
+}
+
+.contact-container img {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.contact-container dl {
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.contact-container span {
+    color: #999;
+    position: absolute;
+        right: 10px;
+        top: 10px;
+}

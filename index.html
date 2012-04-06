@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Backbone.js Tutorial</title>
+    <link rel="stylesheet" href="styles/css/style.css" />
+</head>
+<body>
+    <div id="contacts"></div>
+    <!-- Template for each contact -->
+    <script id="contactTemplate" type="text/template">
+        <img src="<%= photo %>" alt="<%= name %>" />
+        <h1><%= name %></h1>
+        <span><%= type %></span>
+        <div><%= address %></div>
+        <dl>
+            <dt>Tel: </dt><dd><%= tel %></dd>
+            <dt>Email: </dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+        </dl>
+    </script>
+    <!-- Scripts -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
