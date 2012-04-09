@@ -6,9 +6,23 @@
     <link rel="stylesheet" href="styles/css/style.css" />
 </head>
 <body>
-    <div id="contacts"></div>
+    <div id="contacts">
+        <header>
+            <div id="filter"><label>Show me:</label></div>
+            <a id="show-form" href="#">New Contact</a>
+        </header>
+        <form id="add-contact" action="#">
+            <label for="photo">Photo:</label><input id="photo" type="file" /><br />
+            <label for="type">Type:</label><input id="type" /><br />
+            <label for="name">Name:</label><input id="name" /><br />
+            <label for="address">Address:</label><input id="address" /><br />
+            <label for="tel">Tel:</label><input id="tel" /><br />
+            <label for="email">Email:</label><input id="email" /><br />
+            <button id="add">Add</button>
+        </form>
+    </div>
     <!-- Template for each contact -->
-    <script id="contactTemplate" type="text/template">
+    <script id="contact-template" type="text/template">
         <img src="<%= photo %>" alt="<%= name %>" />
         <h1><%= name %></h1>
         <span><%= type %></span>
@@ -17,6 +31,20 @@
             <dt>Tel: </dt><dd><%= tel %></dd>
             <dt>Email: </dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
         </dl>
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+    </script>
+    <script id="contact-edit-template" type="text/template">
+        <form>
+            <input type="file" value="<%= photo %>" />
+            <input class="name" value="<%= name %>" />
+            <input id="type" type="hidden" value="<%= type %>" />
+            <input class="address" value="<%= address %>" />
+            <input class="tel" value="<%= tel %>" />
+            <input class="email" value="<%= email %>" />
+            <button class="save">Save</button>
+            <button class="cancel">Cancel</button>
+        </form>
     </script>
     <!-- Scripts -->
     <script src="js/jquery-1.7.2.min.js"></script>
